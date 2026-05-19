@@ -279,6 +279,35 @@ if (counters.length) {
   counters.forEach(el => cObs.observe(el));
 }
 
+/* ─── Gallery: fade in once first images are settled (prevents layout shift) ── */
+const masonryGrid = document.querySelector('.masonry-grid');
+if (masonryGrid) {
+  const allImgs = Array.from(masonryGrid.querySelectorAll('img'));
+  // Only wait on the first 9 images (above the fold on most screens)
+  const firstBatch = allImgs.slice(0, 9);
+  let loadedCount = 0;
+  const THRESHOLD = Math.min(firstBatch.length, 6); // show after 6 images settle
+
+  const tryReveal = () => {
+    loadedCount++;
+    if (loadedCount >= THRESHOLD) masonryGrid.classList.add('is-ready');
+  };
+
+  if (firstBatch.length === 0) {
+    masonryGrid.classList.add('is-ready');
+  } else {
+    firstBatch.forEach(img => {
+      if (img.complete && img.naturalWidth > 0) tryReveal();
+      else {
+        img.addEventListener('load', tryReveal, { once: true });
+        img.addEventListener('error', tryReveal, { once: true });
+      }
+    });
+  }
+  // Hard fallback: always reveal within 2.5s even on slow connections
+  setTimeout(() => masonryGrid.classList.add('is-ready'), 2500);
+}
+
 /* ─── Gallery filter ─────────────────────────────────────────────── */
 const filterBtns = document.querySelectorAll('.filter-btn');
 const masonryItems = document.querySelectorAll('.masonry-item');

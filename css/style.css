@@ -1742,6 +1742,13 @@ h1, h2, h3, h4 {
   margin: 0 auto;
   columns: 3;
   column-gap: 1.25rem;
+  /* Start hidden — JS fades in once first images are settled */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.masonry-grid.is-ready {
+  opacity: 1;
 }
 
 .masonry-item.gallery-hidden {
@@ -1755,7 +1762,9 @@ h1, h2, h3, h4 {
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  /* Placeholder colour + min-height while image is loading */
   background: var(--sand);
+  min-height: 180px;
 }
 
 .masonry-item img {
