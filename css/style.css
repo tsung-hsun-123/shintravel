@@ -1870,6 +1870,15 @@ h1, h2, h3, h4 {
   grid-template-columns: 280px 1fr;
   box-shadow: 0 2px 12px rgba(61,43,26,.06);
   transition: transform .3s var(--ease-smooth), box-shadow .3s;
+  position: relative; /* needed for the full-card click overlay */
+  cursor: pointer;
+}
+
+/* Stretch the read-more link to cover the entire card */
+.post-card .card-read-more::after {
+  content: '';
+  position: absolute;
+  inset: 0;
 }
 
 .post-card:hover {
