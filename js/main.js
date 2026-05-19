@@ -269,9 +269,14 @@ if (counters.length) {
   const cObs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
-        const target = parseInt(e.target.dataset.count, 10);
+        const raw = e.target.dataset.count;
         const suffix = e.target.dataset.suffix || '';
-        animateCount(e.target, target, suffix);
+        // If the value is ∞ (or any non-numeric), show it directly — no counting
+        if (raw === '∞' || isNaN(parseInt(raw, 10))) {
+          e.target.textContent = raw + suffix;
+        } else {
+          animateCount(e.target, parseInt(raw, 10), suffix);
+        }
         cObs.unobserve(e.target);
       }
     });
