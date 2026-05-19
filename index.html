@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <title>The Ultimate Trip of a Lifetime — From Beijing to Morocco</title>
+  <meta name="description" content="One person. A solo journey across Asia, Africa and beyond — inspired by 三毛. Follow Shin's adventure." />
+  <link rel="canonical" href="https://shintravel.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="The Ultimate Trip of a Lifetime — From Beijing to Morocco" />
+  <meta property="og:description" content="One person. A solo journey across Asia, Africa and beyond — inspired by 三毛. Follow Shin's adventure." />
+  <meta property="og:image"       content="https://shintravel.com/photos/china/china-yunnan-6987.webp" />
+  <meta property="og:url"         content="https://shintravel.com/" />
+  <meta property="og:site_name"   content="The Ultimate Trip of a Lifetime" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="The Ultimate Trip of a Lifetime — From Beijing to Morocco" />
+  <meta name="twitter:description" content="One person. A solo journey across Asia, Africa and beyond — inspired by 三毛. Follow Shin's adventure." />
+  <meta name="twitter:image"       content="https://shintravel.com/photos/china/china-yunnan-6987.webp" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "Shin",
+        "url": "https://shintravel.com",
+        "description": "Solo traveller documenting a 365-day journey through 14+ countries across Asia, Africa and beyond, inspired by the writer 三毛's move to the Western Sahara.",
+        "image": "https://shintravel.com/photos/china/china-yunnan-6987.webp",
+        "sameAs": ["https://www.instagram.com/"]
+      },
+      {
+        "@type": "Blog",
+        "name": "The Ultimate Trip of a Lifetime",
+        "url": "https://shintravel.com",
+        "description": "A solo travel journal documenting adventures across Asia, Africa and beyond — with life lessons, photography, and honest storytelling.",
+        "author": { "@type": "Person", "name": "Shin" },
+        "inLanguage": "en"
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,400;1,600&family=Caveat:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css" />
+</head>
+<body>
+
+  <!-- ── Nav ──────────────────────────────────────────────────────── -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo nav-logo-hidden" id="nav-logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+      <img src="logo.png" alt="Shin's Adventure — The Ultimate Trip of a Lifetime" style="height:48px;width:auto;display:block;" />
+      <span style="font-size:1.2rem;font-weight:600;white-space:nowrap;">The Ultimate Trip of a Lifetime</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="wisdom.html">Wisdom</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#newsletter" class="nav-cta">Follow Along</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── Hero ─────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-bg-shapes">
+      <div class="hero-circle hero-circle-1"></div>
+      <div class="hero-circle hero-circle-2"></div>
+      <div class="hero-circle hero-circle-3"></div>
+      <!-- Decorative mandala SVG -->
+      <svg class="hero-mandala" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="96" stroke="#3D2B1A" stroke-width=".5"/>
+        <circle cx="100" cy="100" r="70" stroke="#3D2B1A" stroke-width=".5"/>
+        <circle cx="100" cy="100" r="44" stroke="#3D2B1A" stroke-width=".5"/>
+        <circle cx="100" cy="100" r="18" stroke="#3D2B1A" stroke-width=".5"/>
+        <line x1="4" y1="100" x2="196" y2="100" stroke="#3D2B1A" stroke-width=".5"/>
+        <line x1="100" y1="4" x2="100" y2="196" stroke="#3D2B1A" stroke-width=".5"/>
+        <line x1="32" y1="32" x2="168" y2="168" stroke="#3D2B1A" stroke-width=".5"/>
+        <line x1="168" y1="32" x2="32" y2="168" stroke="#3D2B1A" stroke-width=".5"/>
+        <circle cx="100" cy="4"   r="3" fill="#C4956A" opacity=".6"/>
+        <circle cx="100" cy="196" r="3" fill="#C4956A" opacity=".6"/>
+        <circle cx="4"   cy="100" r="3" fill="#C4956A" opacity=".6"/>
+        <circle cx="196" cy="100" r="3" fill="#C4956A" opacity=".6"/>
+        <circle cx="32"  cy="32"  r="3" fill="#C4956A" opacity=".6"/>
+        <circle cx="168" cy="32"  r="3" fill="#C4956A" opacity=".6"/>
+        <circle cx="32"  cy="168" r="3" fill="#C4956A" opacity=".6"/>
+        <circle cx="168" cy="168" r="3" fill="#C4956A" opacity=".6"/>
+        <circle cx="100" cy="30"  r="2" fill="#7A9E7E" opacity=".5"/>
+        <circle cx="100" cy="170" r="2" fill="#7A9E7E" opacity=".5"/>
+        <circle cx="30"  cy="100" r="2" fill="#7A9E7E" opacity=".5"/>
+        <circle cx="170" cy="100" r="2" fill="#7A9E7E" opacity=".5"/>
+      </svg>
+
+      <!-- Marauder's Map trail canvas -->
+      <canvas id="hero-trail" aria-hidden="true"></canvas>
+
+    </div>
+
+    <div class="hero-brand" id="hero-brand">
+      <img src="logo.png" alt="Shin's Adventure" class="hero-brand-logo" />
+    </div>
+
+    <div class="hero-eyebrow">
+      <span class="eyebrow">A solo journey around the world</span>
+    </div>
+    <h1 class="hero-title">The <em>Ultimate</em> Trip of a Lifetime</h1>
+    <p class="hero-sub">
+      "Those who say 'Yes' are rewarded by the adventures they have,<br>and those who say 'No' are rewarded by the safety they attain." — Keith Johnstone
+    </p>
+    <div class="hero-actions">
+      <a href="journal.html" class="btn btn-primary">Read the Journal ↗</a>
+      <a href="gallery.html" class="btn btn-ghost">View Gallery</a>
+    </div>
+
+  </section>
+
+  <!-- ── Stats ─────────────────────────────────────────────────────── -->
+  <div class="stats-banner">
+    <div class="stat">
+      <span class="stat-num" data-count="14" data-suffix="+">0+</span>
+      <span class="stat-label">Countries</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-count="47" data-suffix="">0</span>
+      <span class="stat-label">Cities visited</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-count="365" data-suffix=" days">0 days</span>
+      <span class="stat-label">On the road</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-count="∞" data-suffix="">∞</span>
+      <span class="stat-label">Moments of stillness</span>
+    </div>
+  </div>
+
+  <!-- ── About ─────────────────────────────────────────────────────── -->
+  <section class="section intro" id="about">
+    <div class="section-inner intro-grid">
+      <div class="intro-text reveal">
+        <p class="eyebrow">The story behind the journey</p>
+        <h2 class="section-title" style="font-size:clamp(1.6rem,3vw,2.2rem)">I didn't leave to find myself —<br/>I left to find out.</h2>
+        <p style="margin-top:2rem">
+          It started with a book by 三毛. A woman in the 1970s who just decided to pack up and move
+          to the Western Sahara — on her own. What got me wasn't the adventure itself, it was her.
+          She found her purpose, stayed true to herself, and never once flinched from it. That kind
+          of wholeness — knowing who you are and actually living it — that stayed with me.
+        </p>
+        <p>
+          I think that's where a lot of who I am today came from. The wanting to take risks, to go
+          on adventures, to actually live rather than just watch life pass by.
+        </p>
+        <div class="conviction-block">
+          <span class="conviction-line">So I made a promise to myself.</span>
+          One day, I would go to the Western Sahara too.<br/>
+          That promise became the goal. And the goal became <em>The Ultimate Trip of a Lifetime</em>.
+        </div>
+        <p>
+          But more than anything, this is for you — whoever finds their way here. You don't have to
+          be fearless, or extraordinary, or have it all figured out. An extraordinary life isn't
+          reserved for a certain kind of person. It's available to anyone who decides to choose it.
+          Even the most ordinary person can live something remarkable — not by luck, but by just
+          saying yes. If you leave here with that feeling, this is already worth it.
+        </p>
+        <blockquote>
+          "To everyone who ends up here — thank you for saying yes, this one's for you."
+        </blockquote>
+        <a href="journal.html" class="btn btn-primary" style="margin-top:1.5rem">Start reading →</a>
+      </div>
+      <div class="intro-visual reveal reveal-delay-2">
+        <div class="intro-img-frame">
+          <img src="photos/china/china-yunnan-6987.webp" alt="Shin smiling in Lijiang Old Town, Yunnan, China" />
+        </div>
+        <div class="intro-annotation">
+          <span class="intro-annotation-text">yep, this is me — I'm Shin</span>
+        </div>
+        <!-- Arrow originates from word "me", loops halfway, tip lands on head -->
+        <svg class="intro-arrow" viewBox="0 0 128 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- leg 1: from "me", curves to loop -->
+          <!-- loop: clockwise circle centred at (35,95), r=18 -->
+          <!-- leg 2: sweeps right to head -->
+          <path d="
+            M 5 5
+            C 10 30, 20 62, 34 80
+            C 44 80, 53 88, 53 97
+            C 53 106, 44 115, 34 115
+            C 24 115, 15 106, 15 97
+            C 15 88, 24 80, 34 80
+            C 55 80, 92 132, 114 178"
+            stroke="white" stroke-width="2.5" stroke-dasharray="6 4" stroke-linecap="round" fill="none"
+            style="filter:drop-shadow(0 1px 4px rgba(0,0,0,0.6))"/>
+          <!-- arrowhead -->
+          <path d="M 106 170 L 114 179 L 122 170"
+            stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"
+            style="filter:drop-shadow(0 1px 4px rgba(0,0,0,0.6))"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Route Map ────────────────────────────────────────────────── -->
+  <section class="section map-section" id="route">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <p class="eyebrow">Where in the world am I right now?</p>
+        <h2 class="section-title">Catch me <em>live</em></h2>
+      </div>
+      <div id="route-map-root" class="reveal reveal-delay-1"></div>
+    </div>
+  </section>
+
+  <!-- ── Destinations Ticker ───────────────────────────────────────── -->
+  <section class="section destinations" style="padding:3rem 0;">
+    <div class="section-inner" style="padding:0 2rem 1.5rem;">
+      <p class="eyebrow" style="text-align:center">Places visited so far · 14 countries</p>
+    </div>
+    <div class="dest-track-wrap">
+      <div class="dest-track">
+
+        <!-- ── SET 1 ─────────────────────────────────────────────── -->
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇺🇸</span>
+          <span>United States</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">United States</div>
+            <ul class="dest-stop-list">
+              <li>San Francisco</li>
+              <li>Los Angeles</li>
+              <li>New York</li>
+              <li>Washington D.C.</li>
+              <li>Buffalo</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇿🇦</span>
+          <span>South Africa</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">South Africa</div>
+            <ul class="dest-stop-list">
+              <li>Cape Town</li>
+              <li>George</li>
+              <li>Oudtshoorn</li>
+              <li>Knysna</li>
+              <li>Tsitsikamma</li>
+              <li>Port Elizabeth</li>
+              <li>Bloemfontein</li>
+              <li>Johannesburg</li>
+              <li>Pretoria</li>
+              <li>Kruger National Park</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇦🇺</span>
+          <span>Australia</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Australia</div>
+            <ul class="dest-stop-list">
+              <li>Sydney</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇸🇬</span>
+          <span>Singapore</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Singapore</div>
+            <ul class="dest-stop-list">
+              <li>Singapore City</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇲🇾</span>
+          <span>Malaysia</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Malaysia</div>
+            <ul class="dest-stop-list">
+              <li>Kuala Lumpur</li>
+              <li>Penang</li>
+              <li>Malacca</li>
+              <li>Padang Besar</li>
+              <li>Redang Island</li>
+              <li>Johor Bahru</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇮🇩</span>
+          <span>Indonesia</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Indonesia</div>
+            <ul class="dest-stop-list">
+              <li>Bali</li>
+              <li>Bintan</li>
+              <li>Batam</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇹🇭</span>
+          <span>Thailand</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Thailand</div>
+            <ul class="dest-stop-list">
+              <li>Hat Yai</li>
+              <li>Bangkok</li>
+              <li>Ayutthaya</li>
+              <li>Sukhothai</li>
+              <li>Chiang Mai</li>
+              <li>Mae Salong</li>
+              <li>Chiang Rai</li>
+              <li>Chiang Khong</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇱🇦</span>
+          <span>Laos</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Laos</div>
+            <ul class="dest-stop-list">
+              <li>Houayxay</li>
+              <li>Mekong River</li>
+              <li>Luang Prabang</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇻🇳</span>
+          <span>Vietnam</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Vietnam</div>
+            <ul class="dest-stop-list">
+              <li>Dien Bien Phu</li>
+              <li>Hanoi</li>
+              <li>Ninh Binh</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇹🇼</span>
+          <span>Taiwan</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Taiwan</div>
+            <ul class="dest-stop-list">
+              <li>Taiwan</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇨🇳</span>
+          <span>China</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">China</div>
+            <ul class="dest-stop-list">
+              <li>Beijing</li>
+              <li>Tianjin</li>
+              <li>Shanghai</li>
+              <li>Fujian</li>
+              <li>Shenzhen</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇭🇰</span>
+          <span>Hong Kong</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Hong Kong</div>
+            <ul class="dest-stop-list">
+              <li>Hong Kong</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇮🇳</span>
+          <span>India</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">India</div>
+            <ul class="dest-stop-list">
+              <li>Kolkata</li>
+              <li>Nalanda</li>
+              <li>Rajgir</li>
+              <li>Maha Bodhi</li>
+              <li>New Delhi</li>
+              <li>Sonipat</li>
+              <li>Jaipur</li>
+              <li>Mumbai</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇯🇵</span>
+          <span>Japan</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Japan</div>
+            <ul class="dest-stop-list">
+              <li>Tokyo</li>
+              <li>Nikko</li>
+              <li>Lake Kawaguchiko</li>
+              <li>Yokohama</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── SET 2 (duplicate for seamless loop) ───────────────── -->
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇺🇸</span>
+          <span>United States</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">United States</div>
+            <ul class="dest-stop-list">
+              <li>San Francisco</li>
+              <li>Los Angeles</li>
+              <li>New York</li>
+              <li>Washington D.C.</li>
+              <li>Buffalo</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇿🇦</span>
+          <span>South Africa</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">South Africa</div>
+            <ul class="dest-stop-list">
+              <li>Cape Town</li>
+              <li>George</li>
+              <li>Oudtshoorn</li>
+              <li>Knysna</li>
+              <li>Tsitsikamma</li>
+              <li>Port Elizabeth</li>
+              <li>Bloemfontein</li>
+              <li>Johannesburg</li>
+              <li>Pretoria</li>
+              <li>Kruger National Park</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇦🇺</span>
+          <span>Australia</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Australia</div>
+            <ul class="dest-stop-list">
+              <li>Sydney</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇸🇬</span>
+          <span>Singapore</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Singapore</div>
+            <ul class="dest-stop-list">
+              <li>Singapore City</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇲🇾</span>
+          <span>Malaysia</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Malaysia</div>
+            <ul class="dest-stop-list">
+              <li>Kuala Lumpur</li>
+              <li>Penang</li>
+              <li>Malacca</li>
+              <li>Padang Besar</li>
+              <li>Redang Island</li>
+              <li>Johor Bahru</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇮🇩</span>
+          <span>Indonesia</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Indonesia</div>
+            <ul class="dest-stop-list">
+              <li>Bali</li>
+              <li>Bintan</li>
+              <li>Batam</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇹🇭</span>
+          <span>Thailand</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Thailand</div>
+            <ul class="dest-stop-list">
+              <li>Hat Yai</li>
+              <li>Bangkok</li>
+              <li>Ayutthaya</li>
+              <li>Sukhothai</li>
+              <li>Chiang Mai</li>
+              <li>Mae Salong</li>
+              <li>Chiang Rai</li>
+              <li>Chiang Khong</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇱🇦</span>
+          <span>Laos</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Laos</div>
+            <ul class="dest-stop-list">
+              <li>Houayxay</li>
+              <li>Mekong River</li>
+              <li>Luang Prabang</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇻🇳</span>
+          <span>Vietnam</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Vietnam</div>
+            <ul class="dest-stop-list">
+              <li>Dien Bien Phu</li>
+              <li>Hanoi</li>
+              <li>Ninh Binh</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇹🇼</span>
+          <span>Taiwan</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Taiwan</div>
+            <ul class="dest-stop-list">
+              <li>Taiwan</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇨🇳</span>
+          <span>China</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">China</div>
+            <ul class="dest-stop-list">
+              <li>Beijing</li>
+              <li>Tianjin</li>
+              <li>Shanghai</li>
+              <li>Fujian</li>
+              <li>Shenzhen</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇭🇰</span>
+          <span>Hong Kong</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Hong Kong</div>
+            <ul class="dest-stop-list">
+              <li>Hong Kong</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇮🇳</span>
+          <span>India</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">India</div>
+            <ul class="dest-stop-list">
+              <li>Kolkata</li>
+              <li>Nalanda</li>
+              <li>Rajgir</li>
+              <li>Maha Bodhi</li>
+              <li>New Delhi</li>
+              <li>Sonipat</li>
+              <li>Jaipur</li>
+              <li>Mumbai</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dest-country-pill">
+          <span class="dest-flag">🇯🇵</span>
+          <span>Japan</span>
+          <div class="dest-cities-drop">
+            <div class="dest-drop-label">Japan</div>
+            <ul class="dest-stop-list">
+              <li>Tokyo</li>
+              <li>Nikko</li>
+              <li>Lake Kawaguchiko</li>
+              <li>Yokohama</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- end SET 2 -->
+        <!-- placeholder to close old SET 2 Malaysia pill -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Journal Preview ───────────────────────────────────────────── -->
+  <section class="section journal" id="journal">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <p class="eyebrow">Latest writings</p>
+        <h2 class="section-title">From the journal</h2>
+      </div>
+      <div class="journal-grid">
+
+        <article class="journal-card reveal reveal-delay-1">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&q=80" alt="Kyoto temple at dawn" />
+            <span class="card-tag">Japan</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>March 2026</span>
+              <span class="card-dot"></span>
+              <span>5 min read</span>
+            </div>
+            <h3 class="card-title">The silence of a Kyoto dawn</h3>
+            <p class="card-excerpt">
+              At 5am the stone paths of Fushimi Inari were empty. Just the lanterns,
+              the vermillion gates, and the sound of my own breath finding its rhythm
+              for the first time in years.
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="journal.html" class="card-read-more">Read more <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="journal-card reveal reveal-delay-2">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?w=600&q=80" alt="Ganges river at Varanasi" />
+            <span class="card-tag">India</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>February 2026</span>
+              <span class="card-dot"></span>
+              <span>7 min read</span>
+            </div>
+            <h3 class="card-title">What the Ganges taught me about letting go</h3>
+            <p class="card-excerpt">
+              Varanasi is a city that confronts you with impermanence at every turn.
+              Watching the evening Ganga Aarti, I finally understood what it means
+              to hold everything lightly.
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="journal.html" class="card-read-more">Read more <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="journal-card reveal reveal-delay-3">
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Lisbon tram street" />
+            <span class="card-tag">Portugal</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>January 2026</span>
+              <span class="card-dot"></span>
+              <span>4 min read</span>
+            </div>
+            <h3 class="card-title">Fado, longing, and the beauty of saudade</h3>
+            <p class="card-excerpt">
+              The Portuguese have a word for a feeling no other language quite captures —
+              a bittersweet longing for something beautiful that has passed.
+              Sitting in a Lisbon tasca, I felt it in my bones.
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="journal.html" class="card-read-more">Read more <span>→</span></a>
+          </div>
+        </article>
+
+      </div>
+      <div style="text-align:center;margin-top:2.5rem;" class="reveal">
+        <a href="journal.html" class="btn btn-ghost">All journal entries →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Gallery Preview ───────────────────────────────────────────── -->
+  <section class="gallery" id="gallery">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <p class="eyebrow">Through the lens</p>
+        <h2 class="section-title">Moments in light</h2>
+      </div>
+      <div class="gallery-grid reveal">
+        <div class="gallery-item">
+          <img src="photos/southafrica/southafrica-8097.webp" alt="Aerial view of Cape Town with Table Mountain, Lion's Head, and the V&A Waterfront" />
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Cape Town from above, South Africa</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="photos/australia/sydney-0874.webp" alt="Sydney Opera House with Harbour Bridge behind" />
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Sydney Opera House, Australia</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="photos/us/us2019-4868.webp" alt="Mono Lake tufa towers rising from still blue water" />
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Mono Lake, California</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="photos/japan/tokyo-9425.webp" alt="Kaminarimon gate giant lantern at Senso-ji, Asakusa, Tokyo" />
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Senso-ji Temple, Tokyo</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="photos/china/china-3264.webp" alt="Forbidden City Hall of Supreme Harmony in winter" />
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Forbidden City, Beijing</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-see-all reveal">
+        <a href="gallery.html" class="btn" style="background:var(--terra);color:var(--cream);">View full gallery →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Wisdom Preview ────────────────────────────────────────────── -->
+  <section class="section wisdom" id="wisdom">
+    <div class="section-inner">
+      <div class="section-header centered reveal">
+        <p class="eyebrow">Collected along the way</p>
+        <h2 class="section-title">My Life Philosophy</h2>
+      </div>
+      <div class="wisdom-grid">
+
+        <div class="quote-card featured reveal">
+          <div class="quote-mark">"</div>
+          <p class="quote-text">
+            Not until we are lost, in other words not until we have lost the world,
+            do we begin to find ourselves, and realize where we are and the infinite
+            extent of our relations.
+          </p>
+          <p class="quote-author">Henry David Thoreau</p>
+          <p class="quote-place">Walden — gifted to me by a stranger in a hostel in Kyoto</p>
+          <span class="quote-tag">Purpose</span>
+        </div>
+
+        <div class="quote-card reveal reveal-delay-1">
+          <div class="quote-mark">"</div>
+          <p class="quote-text">
+            Wherever you go, go with all your heart.
+          </p>
+          <p class="quote-author">Confucius</p>
+          <p class="quote-place">Written on a temple wall in Chiang Mai</p>
+          <span class="quote-tag">Presence</span>
+        </div>
+
+        <div class="quote-card reveal reveal-delay-2">
+          <div class="quote-mark">"</div>
+          <p class="quote-text">
+            The quieter you become, the more you are able to hear.
+          </p>
+          <p class="quote-author">Rumi</p>
+          <p class="quote-place">Whispered during a meditation retreat in Bali</p>
+          <span class="quote-tag">Stillness</span>
+        </div>
+
+      </div>
+      <div style="text-align:center;margin-top:2.5rem;" class="reveal">
+        <a href="wisdom.html" class="btn btn-ghost">All quotes & wisdom →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA / Newsletter ──────────────────────────────────────────── -->
+  <section class="cta-band" id="newsletter">
+    <div class="section-inner" style="text-align:center;">
+      <p class="eyebrow" style="color:rgba(255,253,247,.6)">Follow the adventure</p>
+      <h2 class="section-title reveal">
+        Catch every moment on Instagram
+      </h2>
+      <p class="reveal" style="max-width:480px;margin:0 auto 2rem;">
+        Photos from the road, stories between the lines, and the unfiltered moments in between — all on Instagram.
+      </p>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="btn btn-white reveal" style="display:inline-flex;align-items:center;gap:.6rem;font-size:1rem;padding:.9rem 2rem;text-decoration:none;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+        Follow @shin — coming soon
+      </a>
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <img src="logo.png" alt="Shin's Adventure — The Ultimate Trip of a Lifetime" style="height:56px;width:auto;display:block;" />
+          </div>
+          <p><strong>Shin</strong> is a solo traveller documenting a 365-day journey through 14+ countries across Asia, Africa and beyond — inspired by 三毛's move to the Western Sahara. This site is the diary.</p>
+        </div>
+        <div>
+          <p class="footer-nav-title">Explore</p>
+          <ul class="footer-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="wisdom.html">Wisdom</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-nav-title">Regions</p>
+          <ul class="footer-nav-links">
+            <li><a href="journal.html">Asia</a></li>
+            <li><a href="journal.html">Europe</a></li>
+            <li><a href="journal.html">South America</a></li>
+            <li><a href="journal.html">Africa</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-nav-title">Themes</p>
+          <ul class="footer-nav-links">
+            <li><a href="wisdom.html">Meditation</a></li>
+            <li><a href="wisdom.html">Solitude</a></li>
+            <li><a href="wisdom.html">Connection</a></li>
+            <li><a href="wisdom.html">Purpose</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 The Ultimate Trip of a Lifetime</span>
+        <span>Made with presence ✦ and wonder</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Lightbox ───────────────────────────────────────────────────── -->
+  <div id="lightbox" class="lightbox">
+    <img id="lightbox-img" src="" alt="" />
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close">✕</button>
+  </div>
+
+  <script src="js/main.js"></script>
+  <!-- React + ReactDOM + Leaflet + Babel (for the route map) -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel" src="js/route-map.jsx"></script>
+</body>
+</html>
