@@ -156,6 +156,7 @@ window.RouteMap = function RouteMap({ currentStopId, onActiveChange }) {
     });
 
     map.addControl(new maplibregl.AttributionControl({ compact: true }), 'bottom-right');
+    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
 
     map.on('error', () => setError(true));
 
