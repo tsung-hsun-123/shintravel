@@ -152,6 +152,7 @@ window.RouteMap = function RouteMap({ currentStopId, onActiveChange }) {
       bounds:            routeBounds(),
       fitBoundsOptions:  { padding: 50 },
       scrollZoom:        false,
+      keyboard:          true,
       attributionControl: false,
     });
 
