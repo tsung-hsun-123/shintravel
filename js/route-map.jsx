@@ -151,7 +151,7 @@ window.RouteMap = function RouteMap({ currentStopId, onActiveChange }) {
       style:             'https://tiles.openfreemap.org/styles/positron',
       bounds:            routeBounds(),
       fitBoundsOptions:  { padding: 50 },
-      scrollZoom:        false,
+      scrollZoom:        true,
       keyboard:          true,
       attributionControl: false,
     });
