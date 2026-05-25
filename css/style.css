@@ -1765,14 +1765,16 @@ h1, h2, h3, h4 {
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  /* Placeholder colour + min-height while image is loading */
   background: var(--sand);
-  min-height: 180px;
 }
 
 .masonry-item img {
   width: 100%;
   display: block;
+  /* Lock aspect ratio BEFORE image loads so the browser reserves
+     the exact space — eliminates layout shift on lazy load */
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   transition: transform .5s var(--ease-smooth);
 }
 
