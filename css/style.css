@@ -1820,36 +1820,6 @@ h1, h2, h3, h4 {
 @media (max-width: 768px) { .masonry-grid { columns: 2; } }
 @media (max-width: 480px) { .masonry-grid { columns: 1; } }
 
-/* ─── Horizontal photo rows (3-across) ──────────────────────────── */
-.photo-row {
-  column-span: all;
-  display: flex;
-  align-items: stretch;
-  gap: 1.25rem;
-  margin-bottom: 1.25rem;
-  min-height: 220px;
-}
-.photo-row .masonry-item {
-  flex: 1;
-  min-width: 0;
-  margin-bottom: 0;
-  overflow: hidden;
-}
-.photo-row .masonry-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.photo-row:not(:has(.masonry-item:not(.gallery-hidden))) { display: none; }
-@media (max-width: 768px) {
-  .photo-row { flex-wrap: wrap; min-height: unset; }
-  .photo-row .masonry-item { flex: 1 1 45%; min-height: 180px; }
-}
-@media (max-width: 480px) {
-  .photo-row .masonry-item { flex: 1 1 100%; min-height: 220px; }
-}
-
 /* ─── Page: Journal ──────────────────────────────────────────────── */
 .journal-page {
   background: var(--sand-light);

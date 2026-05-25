@@ -146,7 +146,6 @@
       ctx.save();
       ctx.lineCap = 'round';
       ctx.setLineDash([]);
-      // Draw tapering glowing trail
       for (let j = 1; j < s.trail.length; j++) {
         const t     = j / s.trail.length;          // 0=tail end → 1=head
         const alpha = t * t * s.life * 0.72;
