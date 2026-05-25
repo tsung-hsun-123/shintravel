@@ -1745,6 +1745,7 @@ h1, h2, h3, h4 {
   margin: 0 auto;
   columns: 3;
   column-gap: 1.25rem;
+  column-fill: auto; /* fill columns top-to-bottom, no bottom gaps */
   /* Start hidden — JS fades in once first images are settled */
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -1771,12 +1772,15 @@ h1, h2, h3, h4 {
 .masonry-item img {
   width: 100%;
   display: block;
-  /* Lock aspect ratio BEFORE image loads so the browser reserves
-     the exact space — eliminates layout shift on lazy load */
-  aspect-ratio: 4 / 3;
   object-fit: cover;
   transition: transform .5s var(--ease-smooth);
 }
+
+/* Random ratio classes — assigned by JS at page load before images load */
+.masonry-item.ratio-landscape img { aspect-ratio: 4 / 3; }
+.masonry-item.ratio-portrait  img { aspect-ratio: 3 / 4; }
+.masonry-item.ratio-wide      img { aspect-ratio: 16 / 9; }
+.masonry-item.ratio-square    img { aspect-ratio: 1 / 1; }
 
 .masonry-item:hover img { transform: scale(1.04); }
 

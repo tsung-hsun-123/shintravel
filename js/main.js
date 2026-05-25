@@ -284,6 +284,28 @@ if (counters.length) {
   counters.forEach(el => cObs.observe(el));
 }
 
+/* ─── Gallery: assign random aspect ratios before images load ────────────── */
+(function assignGalleryRatios() {
+  const items = document.querySelectorAll('.masonry-item');
+  if (!items.length) return;
+
+  // Weighted pool: more landscape/portrait, fewer wide/square for natural variety
+  const pool = [
+    'ratio-landscape', 'ratio-landscape', 'ratio-landscape',
+    'ratio-portrait',  'ratio-portrait',  'ratio-portrait',
+    'ratio-wide',
+    'ratio-square',
+  ];
+
+  // Seeded shuffle so the pattern is stable on each page load
+  // but varies across cards without obvious repetition
+  items.forEach((item, i) => {
+    // Rotate through the pool offset by index to avoid runs of the same ratio
+    const pick = pool[(i * 3) % pool.length];
+    item.classList.add(pick);
+  });
+})();
+
 /* ─── Gallery: fade in once first images are settled (prevents layout shift) ── */
 const masonryGrid = document.querySelector('.masonry-grid');
 if (masonryGrid) {
