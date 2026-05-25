@@ -7,7 +7,7 @@
   const SPEED      = 0.55;
   const CR = 139, CG = 94, CB = 60;
   const PRINT_DIST = 38;  // px of travel between each footstep
-  const MAX_PRINTS = 14;  // last 14 steps visible
+  const MAX_PRINTS = 12;  // last 12 steps visible
 
   let W, H, x, y, angle, tick = 0, init = false;
   let distSincePrint = 0, printIndex = 0;
