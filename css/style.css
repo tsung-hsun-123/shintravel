@@ -1243,6 +1243,9 @@ h1, h2, h3, h4 {
   .nav-links, .nav-cta { display: none; }
   .nav-hamburger { display: flex; }
   .nav { padding: 1rem 1.25rem; }
+  /* Shrink nav logo text so it doesn't collide with the hamburger icon */
+  .nav-logo span { font-size: 0.85rem !important; }
+  .nav-logo img { height: 36px !important; }
   .journal-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr; }
   .gallery-item { height: 240px !important; }
