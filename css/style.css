@@ -2087,13 +2087,11 @@ body.strip-visible .nav { top: 40px; }
 
 /* ─── Launch Countdown Band ──────────────────────────────────────── */
 .launch-band {
-  background: linear-gradient(160deg, #0D0700 0%, #1A0D04 55%, #220F04 100%);
+  background: linear-gradient(150deg, #C4956A 0%, #A86A3E 40%, #8B4E28 100%);
   padding: 5rem 2rem;
   text-align: center;
   position: relative;
   overflow: hidden;
-  /* Top edge: glowing terra border to separate from hero */
-  border-top: 2px solid var(--terra);
 }
 
 /* Large ghost date watermark behind the numbers */
@@ -2106,22 +2104,22 @@ body.strip-visible .nav { top: 40px; }
   font-family: var(--font-title);
   font-size: clamp(5rem, 22vw, 16rem);
   font-weight: 700;
-  color: var(--terra);
-  opacity: .045;
+  color: #fff;
+  opacity: .07;
   pointer-events: none;
   white-space: nowrap;
   line-height: 1;
   letter-spacing: .05em;
 }
 
-/* Subtle radial glow at centre */
+/* Subtle radial light at centre */
 .launch-band::after {
   content: '';
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px; height: 300px;
-  background: radial-gradient(ellipse, rgba(196,149,106,.07) 0%, transparent 70%);
+  width: 700px; height: 350px;
+  background: radial-gradient(ellipse, rgba(255,240,210,.12) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -2138,9 +2136,8 @@ body.strip-visible .nav { top: 40px; }
   font-weight: 700;
   letter-spacing: .28em;
   text-transform: uppercase;
-  color: var(--terra);
+  color: rgba(255,253,247,.75);
   margin-bottom: 2rem;
-  /* thin decorative rules either side */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2152,8 +2149,7 @@ body.strip-visible .nav { top: 40px; }
   content: '';
   width: 40px;
   height: 1px;
-  background: var(--terra);
-  opacity: .5;
+  background: rgba(255,253,247,.4);
 }
 
 /* Pre-departure: countdown timer */
@@ -2176,12 +2172,10 @@ body.strip-visible .nav { top: 40px; }
   font-family: var(--font-title);
   font-size: clamp(5rem, 14vw, 9rem);
   font-weight: 700;
-  /* bright vivid amber — clearly distinct from the stats banner gold */
-  color: #FFCF5C;
+  color: var(--cream);
   line-height: 1;
   display: block;
-  /* soft glow so it feels lit */
-  text-shadow: 0 0 60px rgba(255, 180, 50, .25);
+  text-shadow: 0 2px 24px rgba(0,0,0,.15);
 }
 
 .launch-unit-label {
@@ -2189,18 +2183,16 @@ body.strip-visible .nav { top: 40px; }
   font-weight: 700;
   letter-spacing: .22em;
   text-transform: uppercase;
-  color: #FFCF5C;
-  opacity: .45;
+  color: rgba(255,253,247,.6);
 }
 
 .launch-sep {
   font-family: var(--font-title);
   font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 700;
-  color: #FFCF5C;
-  opacity: .2;
+  color: var(--cream);
+  opacity: .25;
   line-height: 1;
-  /* vertically centred between the numbers */
   align-self: center;
   padding-bottom: 1.6rem;
 }
@@ -2209,12 +2201,10 @@ body.strip-visible .nav { top: 40px; }
   font-family: var(--font-poetry);
   font-style: italic;
   font-size: 1.05rem;
-  color: var(--sand);
-  opacity: .45;
+  color: rgba(255,253,247,.65);
   margin-top: .5rem;
-  /* thin rule above the date line */
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(245, 230, 200, .1);
+  border-top: 1px solid rgba(255,253,247,.15);
 }
 
 /* Post-departure: Day X tracker */
@@ -2229,9 +2219,9 @@ body.strip-visible .nav { top: 40px; }
   font-family: var(--font-title);
   font-size: clamp(5rem, 14vw, 9rem);
   font-weight: 700;
-  color: #FFCF5C;
+  color: var(--cream);
   line-height: 1;
-  text-shadow: 0 0 60px rgba(255, 180, 50, .25);
+  text-shadow: 0 2px 24px rgba(0,0,0,.15);
 }
 
 .launch-day-label {
@@ -2239,8 +2229,7 @@ body.strip-visible .nav { top: 40px; }
   font-weight: 700;
   letter-spacing: .22em;
   text-transform: uppercase;
-  color: #FFCF5C;
-  opacity: .45;
+  color: rgba(255,253,247,.6);
 }
 
 @media (max-width: 480px) {
