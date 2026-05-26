@@ -460,7 +460,7 @@ if (ctaForm) {
             <span class="launch-num" id="lc-hours">${pad(hours)}</span>
           </div>
         </div>
-        <p class="launch-date-line">22 June 2026 · Beijing → Western Sahara</p>`;
+        `;
     } else {
       // Post-departure — Day X tracker
       const dayNum = Math.floor((-diff) / 864e5) + 1;

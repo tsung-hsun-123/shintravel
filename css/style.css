@@ -2087,7 +2087,7 @@ body.strip-visible .nav { top: 40px; }
 
 /* ─── Launch Countdown Band ──────────────────────────────────────── */
 .launch-band {
-  background: linear-gradient(150deg, #E8713A 0%, #CC5018 50%, #A83C10 100%);
+  background: linear-gradient(150deg, #FF7A3E 0%, #F05518 50%, #D03A08 100%);
   padding: 5rem 2rem;
   text-align: center;
   position: relative;
@@ -2151,7 +2151,7 @@ body.strip-visible .nav { top: 40px; }
 
 .launch-num {
   font-family: var(--font-title);
-  font-size: clamp(5rem, 14vw, 9rem);
+  font-size: clamp(6rem, 18vw, 12rem);
   font-weight: 700;
   color: var(--cream);
   line-height: 1;
@@ -2160,12 +2160,12 @@ body.strip-visible .nav { top: 40px; }
 }
 
 .launch-unit-label {
-  font-size: .85rem;
+  font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: .2em;
   text-transform: uppercase;
-  color: rgba(255,253,247,.85);
-  margin-bottom: .5rem;
+  color: rgba(255,253,247,.9);
+  margin-bottom: .6rem;
 }
 
 /* Vertical rule separating the two units */
@@ -2176,16 +2176,6 @@ body.strip-visible .nav { top: 40px; }
   align-self: center;
   margin: 0 2.5rem;
   flex-shrink: 0;
-}
-
-.launch-date-line {
-  font-family: var(--font-poetry);
-  font-style: italic;
-  font-size: 1.05rem;
-  color: rgba(255,253,247,.65);
-  margin-top: .5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(255,253,247,.15);
 }
 
 /* Post-departure: Day X tracker */
