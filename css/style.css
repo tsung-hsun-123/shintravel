@@ -2039,3 +2039,153 @@ h1, h2, h3, h4 {
   opacity: .6;
   margin-top: .35rem;
 }
+
+/* ─── Launch Strip ───────────────────────────────────────────────── */
+.launch-strip {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 110;
+  height: 40px;
+  background: var(--terra);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  transition: transform .35s var(--ease-smooth);
+}
+
+.launch-strip.hidden {
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+.launch-strip-text { text-align: center; }
+
+.launch-strip-close {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .7rem;
+  color: var(--cream);
+  opacity: .7;
+  transition: opacity .2s;
+  flex-shrink: 0;
+}
+
+.launch-strip-close:hover { opacity: 1; }
+
+/* Push nav down when strip is visible */
+body.strip-visible .nav { top: 40px; }
+
+/* ─── Launch Countdown Band ──────────────────────────────────────── */
+.launch-band {
+  background: var(--bark);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.launch-band-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.launch-eyebrow {
+  font-family: var(--font-body);
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--terra);
+  margin-bottom: 1.25rem;
+}
+
+/* Pre-departure: countdown timer */
+.launch-timer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.launch-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .35rem;
+}
+
+.launch-num {
+  font-family: var(--font-title);
+  font-size: clamp(3.5rem, 10vw, 6rem);
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+}
+
+.launch-unit-label {
+  font-size: .65rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--sand);
+  opacity: .5;
+}
+
+.launch-sep {
+  font-family: var(--font-title);
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  font-weight: 700;
+  color: var(--gold);
+  opacity: .35;
+  line-height: 1;
+  padding-bottom: .6rem;
+}
+
+.launch-date-line {
+  font-family: var(--font-poetry);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--sand);
+  opacity: .55;
+  margin-top: .25rem;
+}
+
+/* Post-departure: Day X tracker */
+.launch-day-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+
+.launch-day-num {
+  font-family: var(--font-title);
+  font-size: clamp(3.5rem, 10vw, 6rem);
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.launch-day-label {
+  font-size: .65rem;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--sand);
+  opacity: .5;
+}
+
+@media (max-width: 480px) {
+  .launch-timer { gap: 1.25rem; }
+  .launch-sep   { display: none; }
+}
