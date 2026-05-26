@@ -138,6 +138,34 @@
     <div class="launch-band-inner" id="launch-band-inner">
       <!-- filled by JS -->
     </div>
+
+    <!-- Postmark stamp — decorative, bottom-right corner -->
+    <svg class="launch-stamp" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <path id="st-top" d="M 16,100 A 84,84 0 0,1 184,100"/>
+        <path id="st-bot" d="M 184,100 A 84,84 0 0,1 16,100"/>
+      </defs>
+      <!-- Outer ring -->
+      <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      <!-- Inner ring -->
+      <circle cx="100" cy="100" r="79" fill="none" stroke="currentColor" stroke-width="1"/>
+      <!-- Separator dots at 9 o'clock and 3 o'clock -->
+      <circle cx="8"   cy="100" r="3.5" fill="currentColor"/>
+      <circle cx="192" cy="100" r="3.5" fill="currentColor"/>
+      <!-- Top arc text -->
+      <text font-family="DM Sans, sans-serif" font-size="9.5" font-weight="700"
+            letter-spacing="3" fill="currentColor" text-anchor="middle">
+        <textPath href="#st-top" startOffset="50%">DEP · 22 JUNE 2026</textPath>
+      </text>
+      <!-- Bottom arc text -->
+      <text font-family="DM Sans, sans-serif" font-size="9" font-weight="700"
+            letter-spacing="2.5" fill="currentColor" text-anchor="middle">
+        <textPath href="#st-bot" startOffset="50%">BEIJING · W. SAHARA</textPath>
+      </text>
+      <!-- Centre arrow -->
+      <text x="100" y="114" font-family="Georgia, serif" font-size="34"
+            fill="currentColor" text-anchor="middle">→</text>
+    </svg>
   </div>
 
   <!-- ── Stats ─────────────────────────────────────────────────────── -->

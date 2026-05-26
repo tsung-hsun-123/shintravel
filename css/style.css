@@ -2203,6 +2203,23 @@ body.strip-visible .nav { top: 40px; }
   color: rgba(255,253,247,.6);
 }
 
+/* Postmark stamp */
+.launch-stamp {
+  position: absolute;
+  right: 3rem;
+  bottom: 1.75rem;
+  width: 160px;
+  height: 160px;
+  color: rgba(255, 253, 247, .22);
+  transform: rotate(-12deg);
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .launch-stamp { display: none; }
+}
+
 @media (max-width: 480px) {
   .launch-timer { gap: .75rem; }
   .launch-sep   { display: none; }
