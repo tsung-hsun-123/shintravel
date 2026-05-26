@@ -451,13 +451,13 @@ if (ctaForm) {
         <p class="launch-eyebrow">The journey begins</p>
         <div class="launch-timer">
           <div class="launch-unit">
-            <span class="launch-num" id="lc-days">${pad(days)}</span>
             <span class="launch-unit-label">Days</span>
+            <span class="launch-num" id="lc-days">${pad(days)}</span>
           </div>
-          <span class="launch-sep">:</span>
+          <div class="launch-divider"></div>
           <div class="launch-unit">
-            <span class="launch-num" id="lc-hours">${pad(hours)}</span>
             <span class="launch-unit-label">Hours</span>
+            <span class="launch-num" id="lc-hours">${pad(hours)}</span>
           </div>
         </div>
         <p class="launch-date-line">22 June 2026 · Beijing → Western Sahara</p>`;
