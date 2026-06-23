@@ -387,7 +387,7 @@ if (ctaForm) {
 /* ─── Mobile nav toggle ──────────────────────────────────────────── */
 /* ─── Launch Strip + Countdown ──────────────────────────────────── */
 (function () {
-  const LAUNCH = new Date('2026-06-22T00:00:00');
+  const LAUNCH = new Date('2026-06-23T00:00:00');
   const strip  = document.getElementById('launch-strip');
   const stripText = document.getElementById('launch-strip-text');
   const stripClose = document.getElementById('launch-strip-close');
@@ -435,7 +435,7 @@ if (ctaForm) {
     const hours = Math.floor((diff % 864e5) / 36e5);
     const dayStr = days === 1 ? '1 day' : `${days} days`;
     const hrStr  = hours === 1 ? '1 hr' : `${hours} hrs`;
-    stripText.textContent = `✦  The journey begins 22 June 2026 — ${dayStr} ${hrStr} away  ✦`;
+    stripText.textContent = `✦  The journey begins 23 June 2026 — ${dayStr} ${hrStr} away  ✦`;
   }
 
   /* ── Countdown band (index.html only) ─────────────────────────── */
