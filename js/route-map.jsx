@@ -3,7 +3,7 @@
 
 // ─── Replace each photos[] with your own images when you have them ───────────
 const STOPS = [
-  { id:'beijing', city:'Beijing', country:'China', lat:39.9042, lon:116.4074, day:1, date:'Jun 22', tag:'Departure',
+  { id:'beijing', city:'Beijing', country:'China', lat:39.9042, lon:116.4074, day:1, date:'Jun 23', tag:'Departure',
     note:'One bag. One direction. The rest was open.', link:'gallery.html',
     photos:[
       'https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=600&h=600&fit=crop&q=80',
@@ -11,7 +11,15 @@ const STOPS = [
       'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=600&fit=crop&q=80',
       'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&h=600&fit=crop&q=80',
     ]},
-  { id:'ulaanbaatar', city:'Ulaanbaatar', country:'Mongolia', lat:47.8864, lon:106.9057, day:1, date:'Jun 22', tag:'Steppe',
+  { id:'zamynuud', city:'Zamyn Uud', country:'Mongolia', lat:43.7286, lon:111.8983, day:1, date:'Jun 23', tag:'Border',
+    note:'First Mongolian stamp. The Gobi Desert begins right outside the window.', link:'gallery.html',
+    photos:[
+      'https://images.unsplash.com/photo-1562016600-ece13e8ba570?w=600&h=600&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&h=600&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1518623489648-a173ef7824f3?w=600&h=600&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=600&h=600&fit=crop&q=80',
+    ]},
+  { id:'ulaanbaatar', city:'Ulaanbaatar', country:'Mongolia', lat:47.8864, lon:106.9057, day:3, date:'Jun 25', tag:'Steppe',
     note:'Genghis Khan sites and more sky than I had ever earned.', link:'gallery.html',
     photos:[
       'https://images.unsplash.com/photo-1562016600-ece13e8ba570?w=600&h=600&fit=crop&q=80',
@@ -485,8 +493,8 @@ window.RouteMap = function RouteMap({ currentStopId, onActiveChange }) {
 
 // ─── Render ──────────────────────────────────────────────────────────────────
 // Update CURRENT_STOP_ID to move the "SHIN IS HERE" marker.
-// IDs: beijing | ulaanbaatar | baikal | moscow | berlin | rome | barcelona | tangier | marrakech
-const CURRENT_STOP_ID = 'beijing';
+// IDs: beijing | zamynuud | ulaanbaatar | baikal | moscow | berlin | rome | barcelona | tangier | marrakech
+const CURRENT_STOP_ID = 'zamynuud';
 
 const _mapRoot = document.getElementById('route-map-root');
 if (_mapRoot) {
