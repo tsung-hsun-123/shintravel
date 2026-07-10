@@ -27,7 +27,7 @@ const STOPS = [
       'photos/mongolia/ulaanbaatar-8990.webp',
       'photos/mongolia/ulaanbaatar-9086.webp',
     ]},
-  { id:'baikal', city:'Lake Baikal', country:'Russia', lat:52.2978, lon:104.2964, day:4, date:'Jun 25', tag:'Crossing',
+  { id:'baikal', city:'Lake Baikal', country:'Russia', lat:52.2978, lon:104.2964, day:4, date:'Jul 3', tag:'Crossing',
     note:'World\'s deepest lake. Smoked omul on the shore.', link:'gallery.html',
     photos:[
       'photos/russia/slyudyanka-9309.webp',
@@ -38,10 +38,10 @@ const STOPS = [
   { id:'moscow', city:'Moscow', country:'Russia', lat:55.7558, lon:37.6173, day:11, date:'Jul 2', tag:'City',
     note:'Red Square, Kremlin — the weight of history on every corner.', link:'gallery.html',
     photos:[
-      'https://images.unsplash.com/photo-1520106212299-d99c443e4568?w=600&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1560969184-10fe8719e047?w=600&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=600&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=600&h=600&fit=crop&q=80',
+      'photos/russia/moscow-9548.webp',
+      'photos/russia/moscow-9534.webp',
+      'photos/russia/moscow-9609.webp',
+      'photos/russia/moscow-9472.webp',
     ]},
   { id:'stpetersburg', city:'St. Petersburg', country:'Russia', lat:59.9311, lon:30.3609, day:14, date:'Jul 5', tag:'City',
     note:'The Hermitage, the canals, and the light that never quite died.', link:'gallery.html',
