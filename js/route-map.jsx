@@ -494,7 +494,7 @@ window.RouteMap = function RouteMap({ currentStopId, onActiveChange }) {
 // ─── Render ──────────────────────────────────────────────────────────────────
 // Update CURRENT_STOP_ID to move the "SHIN IS HERE" marker.
 // IDs: beijing | zamynuud | ulaanbaatar | baikal | moscow | berlin | rome | barcelona | tangier | marrakech
-const CURRENT_STOP_ID = 'zamynuud';
+const CURRENT_STOP_ID = 'baikal';
 
 const _mapRoot = document.getElementById('route-map-root');
 if (_mapRoot) {
