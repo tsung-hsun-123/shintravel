@@ -83,6 +83,14 @@ const STOPS = [
       'photos/germany/munich-0487.webp',
       'photos/germany/munich-0574.webp',
     ]},
+  { id:'salzburg', city:'Salzburg', country:'Austria', lat:47.8095, lon:13.0550, day:28, date:'Jul 19', tag:'Alps',
+    note:'Mozart\'s birthplace, the Alps at the edge of town, and a swim in a glacier-fed canal.', link:'gallery.html',
+    photos:[
+      'photos/austria/salzburg-0651.webp',
+      'photos/austria/salzburg-0654.webp',
+      'photos/austria/salzburg-0685.webp',
+      'photos/austria/salzburg-0663.webp',
+    ]},
   { id:'florence', city:'Florence', country:'Italy', lat:43.7696, lon:11.2558, day:30, date:'Jul 21', tag:'Renaissance',
     note:'The Duomo, the Uffizi, and more Renaissance art than one week can hold.', link:'gallery.html',
     photos:[
