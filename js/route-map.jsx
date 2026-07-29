@@ -83,6 +83,14 @@ const STOPS = [
       'photos/germany/munich-0487.webp',
       'photos/germany/munich-0574.webp',
     ]},
+  { id:'florence', city:'Florence', country:'Italy', lat:43.7696, lon:11.2558, day:30, date:'Jul 21', tag:'Renaissance',
+    note:'The Duomo, the Uffizi, and more Renaissance art than one week can hold.', link:'gallery.html',
+    photos:[
+      'https://images.unsplash.com/photo-1543429257-14a640c22a25?w=600&h=600&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1541370976299-7e2f3b76a303?w=600&h=600&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&h=600&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=600&fit=crop&q=80',
+    ]},
   { id:'milan', city:'Milan', country:'Italy', lat:45.4654, lon:9.1859, day:35, date:'Jul 26', tag:'City',
     note:'Duomo, Navigli canals, and a couch from a friend.', link:'gallery.html',
     photos:[
@@ -462,7 +470,7 @@ window.RouteMap = function RouteMap({ currentStopId, onActiveChange }) {
 // ─── Render ──────────────────────────────────────────────────────────────────
 // Update CURRENT_STOP_ID to move the "SHIN IS HERE" marker.
 // IDs: beijing | zamynuud | ulaanbaatar | baikal | moscow | berlin | rome | barcelona | tangier | marrakech
-const CURRENT_STOP_ID = 'baikal';
+const CURRENT_STOP_ID = 'florence';
 
 const _mapRoot = document.getElementById('route-map-root');
 if (_mapRoot) {
