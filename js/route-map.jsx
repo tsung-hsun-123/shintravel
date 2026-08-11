@@ -117,10 +117,10 @@ const STOPS = [
   { id:'barcelona', city:'Barcelona', country:'Spain', lat:41.3851, lon:2.1734, day:39, date:'Jul 30', tag:'Coast',
     note:'Gaudí, the Gothic Quarter, Mediterranean salt in the air.', link:'gallery.html',
     photos:[
-      'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=600&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600&h=600&fit=crop&q=80',
+      'photos/spain/barcelona-1199.webp',
+      'photos/spain/barcelona-1177.webp',
+      'photos/spain/barcelona-1174.webp',
+      'photos/spain/barcelona-1157.webp',
     ]},
   { id:'madrid', city:'Madrid', country:'Spain', lat:40.4168, lon:-3.7038, day:41, date:'Aug 1', tag:'✦ Sanmao',
     note:'Sanmao studied here at 20. She met José here. The beginning of everything.', link:'gallery.html',
@@ -485,7 +485,7 @@ window.RouteMap = function RouteMap({ currentStopId, onActiveChange }) {
 // ─── Render ──────────────────────────────────────────────────────────────────
 // Update CURRENT_STOP_ID to move the "SHIN IS HERE" marker.
 // IDs: beijing | zamynuud | ulaanbaatar | baikal | moscow | berlin | rome | barcelona | tangier | marrakech
-const CURRENT_STOP_ID = 'florence';
+const CURRENT_STOP_ID = 'grancanaria';
 
 const _mapRoot = document.getElementById('route-map-root');
 if (_mapRoot) {
