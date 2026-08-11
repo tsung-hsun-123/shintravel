@@ -468,7 +468,7 @@ if (ctaForm) {
         <div class="launch-day-wrap">
           <p class="launch-eyebrow">The journey</p>
           <span class="launch-day-num">Day ${dayNum}</span>
-          <span class="launch-day-label">Beijing → Western Sahara</span>
+          <span class="launch-day-label">Beijing → Morocco</span>
         </div>`;
     }
   }
