@@ -170,14 +170,6 @@ const STOPS = [
       'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&h=600&fit=crop&q=80',
       'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&h=600&fit=crop&q=80',
     ]},
-  { id:'tangier', city:'Tangier', country:'Morocco', lat:35.7595, lon:-5.8340, day:59, date:'Aug 19', tag:'Strait',
-    note:'The Strait of Gibraltar. Africa in the rearview, Europe ahead.', link:'gallery.html',
-    photos:[
-      'https://images.unsplash.com/photo-1569385210018-127585b96e85?w=600&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=600&h=600&fit=crop&q=80',
-    ]},
 ];
 window.STOPS = STOPS;
 
