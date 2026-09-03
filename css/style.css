@@ -2262,6 +2262,30 @@ body.strip-visible .nav { top: 40px; }
   z-index: 2;
 }
 
+/* Completed journey banner on the About page */
+.about-complete-stats {
+  padding: 4rem 0;
+  background: linear-gradient(145deg, #173f43 0%, #24575a 100%);
+  color: var(--cream);
+}
+
+.about-complete-stats .eyebrow {
+  color: #f3aa6f;
+}
+
+.about-complete-stats .section-title,
+.about-complete-stats .stat-num {
+  color: var(--cream);
+}
+
+.about-complete-stats .stat-label {
+  color: rgba(255,253,247,.72);
+}
+
+.about-complete-stats .stat + .stat {
+  border-left-color: rgba(255,253,247,.18);
+}
+
 /* Postmark stamp */
 .launch-stamp {
   position: absolute;
