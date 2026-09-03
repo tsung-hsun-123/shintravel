@@ -2208,14 +2208,29 @@ body.strip-visible .nav { top: 40px; }
   color: var(--cream);
   line-height: 1;
   text-shadow: 0 2px 24px rgba(0,0,0,.15);
+  margin-bottom: .45rem;
 }
 
 .launch-day-label {
+  display: block;
+  margin-top: .45rem;
   font-size: .62rem;
   font-weight: 700;
   letter-spacing: .22em;
   text-transform: uppercase;
   color: rgba(255,253,247,.6);
+}
+
+@media (max-width: 600px) {
+  .launch-day-num {
+    font-size: clamp(4.25rem, 20vw, 6.5rem);
+    line-height: .95;
+  }
+
+  .launch-day-label {
+    max-width: 90vw;
+    line-height: 1.7;
+  }
 }
 
 .journey-dates {
