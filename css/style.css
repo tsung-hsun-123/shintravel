@@ -2245,19 +2245,20 @@ body.strip-visible .nav { top: 40px; }
 }
 
 .journey-complete-stamp {
-  margin-top: -1.5rem;
-  padding: .4rem 1.1rem;
-  border: 3px double rgba(255,253,247,.88);
-  border-radius: 4px;
-  color: var(--cream);
-  font-size: clamp(.8rem, 1.8vw, 1.1rem);
-  font-weight: 800;
-  letter-spacing: .18em;
+  margin-top: -1.7rem;
+  padding: .58rem 1.55rem;
+  border: 4px double #173f43;
+  border-radius: 5px;
+  background: rgba(255, 245, 220, .14);
+  color: #173f43;
+  font-size: clamp(1rem, 2.35vw, 1.5rem);
+  font-weight: 900;
+  letter-spacing: .2em;
   line-height: 1;
   text-transform: uppercase;
   transform: rotate(-7deg);
-  text-shadow: 0 1px 4px rgba(80,20,0,.25);
-  box-shadow: 0 1px 5px rgba(80,20,0,.12);
+  text-shadow: 0 1px 0 rgba(255,253,247,.2);
+  box-shadow: 0 2px 8px rgba(23,63,67,.14);
   z-index: 2;
 }
 
