@@ -154,21 +154,93 @@ const STOPS = [
       'photos/morocco/marrakech-1682.webp',
       'photos/morocco/marrakech-1695.webp',
     ]},
-  { id:'fes', city:'Fès', country:'Morocco', lat:34.0181, lon:-5.0078, day:54, date:'Aug 14', tag:'Morocco',
-    note:'The medina, the tanneries, and a day trip to Roman Volubilis.', link:'gallery.html',
+  { id:'aitbenhaddou', city:'Aït Benhaddou', country:'Morocco', lat:31.0472, lon:-7.1298, day:54, date:'Aug 15', tag:'Sahara Road · I',
+    note:'Across the High Atlas to a mud-brick ksar rising from the desert.', link:'gallery.html',
     photos:[
-      'https://images.unsplash.com/photo-1569385210018-127585b96e85?w=600&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&h=600&fit=crop&q=80',
+      'photos/morocco/atlas-1706.webp',
+      'photos/morocco/aitbenhaddou-1732.webp',
+      'photos/morocco/aitbenhaddou-1747.webp',
+      'photos/morocco/aitbenhaddou-1754.webp',
     ]},
-  { id:'chefchaouen', city:'Chefchaouen', country:'Morocco', lat:35.1688, lon:-5.2636, day:57, date:'Aug 17', tag:'Morocco',
-    note:'The Blue City. Two days to breathe before the long road home.', link:'gallery.html',
+  { id:'todragorge', city:'Todra Gorge', country:'Morocco', lat:31.5889, lon:-5.5920, day:55, date:'Aug 16', tag:'Sahara Road · II',
+    note:'A ribbon of water beneath canyon walls on the road east.', link:'gallery.html',
     photos:[
-      'https://images.unsplash.com/photo-1569385210018-127585b96e85?w=600&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&h=600&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&h=600&fit=crop&q=80',
+      'photos/morocco/dades-1771.webp',
+      'photos/morocco/todra-1786.webp',
+      'photos/morocco/todra-1791.webp',
+      'photos/morocco/atlas-1725.webp',
+    ]},
+  { id:'merzouga', city:'Merzouga', country:'Morocco', lat:31.0802, lon:-4.0134, day:56, date:'Aug 17', tag:'Sahara Road · III',
+    note:'Camel tracks, Erg Chebbi, and sunrise turning the dunes to gold.', link:'gallery.html',
+    photos:[
+      'photos/morocco/merzouga-1808.webp',
+      'photos/morocco/merzouga-1835.webp',
+      'photos/morocco/merzouga-1946.webp',
+      'photos/morocco/merzouga-1949.webp',
+    ]},
+  { id:'fes', city:'Fès', country:'Morocco', lat:34.0181, lon:-5.0078, day:57, date:'Aug 18', tag:'Imperial City',
+    note:'The medina, carved gates, and the ancient dye vats of Chouara.', link:'gallery.html',
+    photos:[
+      'photos/morocco/fes-1964.webp',
+      'photos/morocco/fes-1974.webp',
+      'photos/morocco/fes-1996.webp',
+      'photos/morocco/fes-2014.webp',
+    ]},
+  { id:'chefchaouen', city:'Chefchaouen', country:'Morocco', lat:35.1688, lon:-5.2636, day:59, date:'Aug 20', tag:'Blue City',
+    note:'Blue lanes climbing the Rif Mountains, from daylight into night.', link:'gallery.html',
+    photos:[
+      'photos/morocco/chefchaouen-2039.webp',
+      'photos/morocco/chefchaouen-2068.webp',
+      'photos/morocco/chefchaouen-2079.webp',
+      'photos/morocco/chefchaouen-2086.webp',
+    ]},
+  { id:'tetouan', city:'Tetouan', country:'Morocco', lat:35.5889, lon:-5.3626, day:60, date:'Aug 21', tag:'Andalusian Medina',
+    note:'A white medina beneath the Rif, shaped by centuries of Andalusian memory.', link:'gallery.html',
+    photos:[
+      'photos/morocco/tetouan-2101.webp',
+      'photos/morocco/tetouan-2103.webp',
+      'photos/morocco/tetouan-2113.webp',
+      'photos/morocco/tetouan-2124.webp',
+    ]},
+  { id:'tangier', city:'Tangier', country:'Morocco', lat:35.7595, lon:-5.8340, day:61, date:'Aug 22', tag:'The Strait',
+    note:'The medina meets the Strait of Gibraltar, Africa looking toward Europe.', link:'gallery.html',
+    photos:[
+      'photos/morocco/tangier-2137.webp',
+      'photos/morocco/tangier-2139.webp',
+      'photos/morocco/tangier-2145.webp',
+      'photos/morocco/tangier-2147.webp',
+    ]},
+  { id:'essaouira', city:'Essaouira', country:'Morocco', lat:31.5085, lon:-9.7595, day:63, date:'Aug 24', tag:'Atlantic',
+    note:'Sea walls, fishing boats, and an Atlantic sunset beyond the medina.', link:'gallery.html',
+    photos:[
+      'photos/morocco/essaouira-2179.webp',
+      'photos/morocco/essaouira-2183.webp',
+      'photos/morocco/essaouira-2188.webp',
+      'photos/morocco/essaouira-2193.webp',
+    ]},
+  { id:'marrakech-return', city:'Marrakech', country:'Morocco', lat:31.6295, lon:-7.9811, day:65, date:'Aug 26', tag:'Full Circle',
+    note:'Back where the Morocco chapter began—one final night in the medina.', link:'gallery.html',
+    photos:[
+      'photos/morocco/marrakech-2220.webp',
+      'photos/morocco/marrakech-2259.webp',
+      'photos/morocco/marrakech-2264.webp',
+      'photos/morocco/marrakech-2268.webp',
+    ]},
+  { id:'istanbul', city:'Istanbul', country:'Turkey', lat:41.0082, lon:28.9784, day:66, date:'Aug 27', tag:'Two Continents',
+    note:'Mosques, bazaars, and ferries crossing the Bosphorus between Europe and Asia.', link:'gallery.html',
+    photos:[
+      'photos/turkey/istanbul-2277.webp',
+      'photos/turkey/istanbul-2281.webp',
+      'photos/turkey/istanbul-2330.webp',
+      'photos/turkey/istanbul-2346.webp',
+    ]},
+  { id:'beijing-return', city:'Beijing', country:'China', lat:39.9042, lon:116.4074, day:67, date:'Aug 28', tag:'Homecoming',
+    note:'Back in Beijing—the line closes where the journey began.', link:'gallery.html',
+    photos:[
+      'photos/turkey/istanbul-2359.webp',
+      'photos/turkey/istanbul-2361.webp',
+      'photos/turkey/istanbul-2362.webp',
+      'photos/turkey/istanbul-2363.webp',
     ]},
 ];
 window.STOPS = STOPS;
@@ -477,7 +549,7 @@ window.RouteMap = function RouteMap({ currentStopId, onActiveChange }) {
 // ─── Render ──────────────────────────────────────────────────────────────────
 // Update CURRENT_STOP_ID to move the "SHIN IS HERE" marker.
 // IDs: beijing | zamynuud | ulaanbaatar | baikal | moscow | berlin | rome | barcelona | tangier | marrakech
-const CURRENT_STOP_ID = 'marrakech';
+const CURRENT_STOP_ID = 'beijing-return';
 
 const _mapRoot = document.getElementById('route-map-root');
 if (_mapRoot) {
