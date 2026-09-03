@@ -50,7 +50,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,400;1,600&family=Caveat:wght@600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=journey-complete" />
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css" />
 </head>
 <body>
@@ -133,7 +133,7 @@
 
   </section>
 
-  <!-- ── Launch Countdown ──────────────────────────────────────────── -->
+  <!-- ── Completed Journey ─────────────────────────────────────────── -->
   <div class="launch-band" id="launch-band">
     <div class="launch-band-inner" id="launch-band-inner">
       <!-- filled by JS -->
@@ -155,16 +155,16 @@
       <!-- Top arc text -->
       <text font-family="DM Sans, sans-serif" font-size="9.5" font-weight="700"
             letter-spacing="3" fill="currentColor" text-anchor="middle">
-        <textPath href="#st-top" startOffset="50%">DEP · 23 JUNE 2026</textPath>
+        <textPath href="#st-top" startOffset="50%">21 JUNE · 29 AUG 2026</textPath>
       </text>
       <!-- Bottom arc text -->
       <text font-family="DM Sans, sans-serif" font-size="9" font-weight="700"
             letter-spacing="2.5" fill="currentColor" text-anchor="middle">
-        <textPath href="#st-bot" startOffset="50%">BEIJING · W. SAHARA</textPath>
+        <textPath href="#st-bot" startOffset="50%">THE LOOP IS COMPLETE</textPath>
       </text>
       <!-- Centre arrow -->
       <text x="100" y="114" font-family="Georgia, serif" font-size="34"
-            fill="currentColor" text-anchor="middle">→</text>
+            fill="currentColor" text-anchor="middle">✓</text>
     </svg>
   </div>
 
@@ -882,7 +882,7 @@
           <div class="nav-logo">
             <img src="logo.png" alt="Shin's Adventure — The Ultimate Trip of a Lifetime" style="height:56px;width:auto;display:block;" />
           </div>
-          <p><strong>Shin</strong> is a solo traveller documenting his journey through 14+ countries across Asia, Africa and beyond. Now he is on his trip to the Western Sahara the 三毛's way. This site is the diary.</p>
+          <p><strong>Shin</strong> is a solo traveller documenting his journey through 14+ countries across Asia, Africa and beyond. From Beijing to the Western Sahara and home again, this site is the completed diary.</p>
         </div>
         <div>
           <p class="footer-nav-title">Explore</p>
@@ -926,7 +926,7 @@
     <button id="lightbox-close" class="lightbox-close" aria-label="Close">✕</button>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=journey-complete"></script>
   <!-- React + ReactDOM + MapLibre + Babel (for the route map) -->
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>

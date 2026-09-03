@@ -1362,6 +1362,21 @@ h1, h2, h3, h4 {
 .mcs-loc  { font-size: .85rem; color: var(--bark); font-weight: 500; margin-top: .25rem; }
 .mcs-date { font-size: .75rem; color: var(--bark-light); opacity: .65; margin-top: .15rem; }
 
+.mcs-complete {
+  margin: -.2rem -.35rem .05rem;
+  padding: .2rem .35rem;
+  border: 2px solid var(--terra);
+  border-radius: 3px;
+  color: var(--terra);
+  font-size: .58rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotate(-7deg);
+  opacity: .88;
+}
+
 .map-legend {
   display: flex;
   justify-content: space-between;
@@ -2201,6 +2216,34 @@ body.strip-visible .nav { top: 40px; }
   letter-spacing: .22em;
   text-transform: uppercase;
   color: rgba(255,253,247,.6);
+}
+
+.journey-dates {
+  position: relative;
+  display: inline-block;
+  margin-top: .65rem;
+  padding: .4rem 1rem;
+  font-family: var(--font-title);
+  font-size: clamp(1.05rem, 2.2vw, 1.45rem);
+  color: var(--cream);
+  letter-spacing: .04em;
+}
+
+.journey-complete-stamp {
+  margin-top: -1.5rem;
+  padding: .4rem 1.1rem;
+  border: 3px double rgba(255,253,247,.88);
+  border-radius: 4px;
+  color: var(--cream);
+  font-size: clamp(.8rem, 1.8vw, 1.1rem);
+  font-weight: 800;
+  letter-spacing: .18em;
+  line-height: 1;
+  text-transform: uppercase;
+  transform: rotate(-7deg);
+  text-shadow: 0 1px 4px rgba(80,20,0,.25);
+  box-shadow: 0 1px 5px rgba(80,20,0,.12);
+  z-index: 2;
 }
 
 /* Postmark stamp */

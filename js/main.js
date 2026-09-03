@@ -387,109 +387,30 @@ if (ctaForm) {
 /* ─── Mobile nav toggle ──────────────────────────────────────────── */
 /* ─── Launch Strip + Countdown ──────────────────────────────────── */
 (function () {
-  const LAUNCH = new Date('2026-06-23T00:00:00');
   const strip  = document.getElementById('launch-strip');
-  const stripText = document.getElementById('launch-strip-text');
-  const stripClose = document.getElementById('launch-strip-close');
-  const band   = document.getElementById('launch-band');
   const bandInner = document.getElementById('launch-band-inner');
-
-  function pad(n) { return String(n).padStart(2, '0'); }
-
-  function getDiff() {
-    return LAUNCH - new Date();
-  }
 
   /* ── Strip ─────────────────────────────────────────────────────── */
   function initStrip() {
     if (!strip) return;
-    const dismissed = localStorage.getItem('launchStripDismissed');
-    const diff = getDiff();
-
-    // Always hide strip once journey has started
-    if (diff <= 0) {
-      strip.classList.add('hidden');
-      return;
-    }
-
-    // Pre-departure
-    if (dismissed) {
-      strip.classList.add('hidden');
-    } else {
-      document.body.classList.add('strip-visible');
-      updateStripText();
-    }
-
-    stripClose && stripClose.addEventListener('click', () => {
-      localStorage.setItem('launchStripDismissed', '1');
-      strip.classList.add('hidden');
-      document.body.classList.remove('strip-visible');
-    });
-  }
-
-  function updateStripText() {
-    if (!stripText) return;
-    const diff = getDiff();
-    if (diff <= 0) return;
-    const days  = Math.floor(diff / 864e5);
-    const hours = Math.floor((diff % 864e5) / 36e5);
-    const dayStr = days === 1 ? '1 day' : `${days} days`;
-    const hrStr  = hours === 1 ? '1 hr' : `${hours} hrs`;
-    stripText.textContent = `✦  The journey begins 23 June 2026 — ${dayStr} ${hrStr} away  ✦`;
+    strip.classList.add('hidden');
   }
 
   /* ── Countdown band (index.html only) ─────────────────────────── */
   function renderBand() {
     if (!bandInner) return;
-    const diff = getDiff();
-
-    if (diff > 0) {
-      // Pre-departure countdown
-      const days  = Math.floor(diff / 864e5);
-      const hours = Math.floor((diff % 864e5) / 36e5);
-      bandInner.innerHTML = `
-        <p class="launch-eyebrow">The journey begins</p>
-        <div class="launch-timer">
-          <div class="launch-unit">
-            <span class="launch-unit-label">Days</span>
-            <span class="launch-num" id="lc-days">${pad(days)}</span>
-          </div>
-          <div class="launch-divider"></div>
-          <div class="launch-unit">
-            <span class="launch-unit-label">Hours</span>
-            <span class="launch-num" id="lc-hours">${pad(hours)}</span>
-          </div>
-        </div>
-        `;
-    } else {
-      // Post-departure — Day X tracker
-      const dayNum = Math.floor((-diff) / 864e5) + 1;
-      bandInner.innerHTML = `
-        <div class="launch-day-wrap">
-          <p class="launch-eyebrow">The journey</p>
-          <span class="launch-day-num">Day ${dayNum}</span>
-          <span class="launch-day-label">Beijing → Western Sahara</span>
-        </div>`;
-    }
-  }
-
-  /* ── Tick every minute (days+hours only, no need for seconds) ─── */
-  function tick() {
-    updateStripText();
-    if (bandInner) {
-      const diff = getDiff();
-      const daysEl  = document.getElementById('lc-days');
-      const hoursEl = document.getElementById('lc-hours');
-      if (daysEl && hoursEl && diff > 0) {
-        daysEl.textContent  = pad(Math.floor(diff / 864e5));
-        hoursEl.textContent = pad(Math.floor((diff % 864e5) / 36e5));
-      }
-    }
+    bandInner.innerHTML = `
+      <div class="launch-day-wrap journey-complete">
+        <p class="launch-eyebrow">The journey is complete</p>
+        <span class="launch-day-num">70 Days</span>
+        <span class="launch-day-label">Beijing → Western Sahara → Beijing</span>
+        <span class="journey-dates">21 June — 29 August 2026</span>
+        <span class="journey-complete-stamp">Journey Complete</span>
+      </div>`;
   }
 
   initStrip();
   renderBand();
-  setInterval(tick, 60000); // update every minute
 })();
 
 /* ─── Mobile nav toggle ──────────────────────────────────────────── */

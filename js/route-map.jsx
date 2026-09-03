@@ -234,8 +234,8 @@ const STOPS = [
       'photos/turkey/istanbul-2330.webp',
       'photos/turkey/istanbul-2346.webp',
     ]},
-  { id:'beijing-return', city:'Beijing', country:'China', lat:39.9042, lon:116.4074, day:67, date:'Aug 28', tag:'Homecoming',
-    note:'Back in Beijing—the line closes where the journey began.', link:'gallery.html',
+  { id:'beijing-return', city:'Beijing', country:'China', lat:39.9042, lon:116.4074, day:70, date:'Aug 29', tag:'Journey Complete',
+    note:'Home in Beijing—the 70-day journey closes where it began.', link:'gallery.html',
     photos:[
       'photos/turkey/istanbul-2359.webp',
       'photos/turkey/istanbul-2361.webp',
@@ -439,7 +439,7 @@ window.RouteMap = function RouteMap({ currentStopId, onActiveChange }) {
     <div>
       <div className="map-head">
         <div>
-          <div className="label" style={{marginBottom:8}}>The Route · 9 stops · 7,400 km overland</div>
+          <div className="label" style={{marginBottom:8}}>The completed route · 30 stops · 70 days</div>
           <h2 className="display"><i>Fly</i> across the journey</h2>
         </div>
         <div className="map-controls">
@@ -502,10 +502,11 @@ window.RouteMap = function RouteMap({ currentStopId, onActiveChange }) {
         <div ref={containerRef} className="leaflet-host" />
         <div className="map-corner-stamp">
           <div className="mcs-inner">
-            <div className="mcs-label">Last update</div>
+            <div className="mcs-label">Final update</div>
             <div className="mcs-day">Day {String(curStop.day).padStart(3,'0')}</div>
             <div className="mcs-loc">{curStop.city}, {curStop.country}</div>
             <div className="mcs-date">{curStop.date} · 2026</div>
+            <div className="mcs-complete">Journey Complete</div>
           </div>
         </div>
       </div>
