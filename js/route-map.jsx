@@ -3,7 +3,7 @@
 
 // ─── Replace each photos[] with your own images when you have them ───────────
 const STOPS = [
-  { id:'beijing', city:'Beijing', country:'China', lat:39.9042, lon:116.4074, day:1, date:'Jun 23', tag:'Departure',
+  { id:'beijing', city:'Beijing', country:'China', lat:39.9042, lon:116.4074, day:1, date:'Jun 21', tag:'Departure',
     note:'One bag. One direction. The rest was open.', link:'gallery.html',
     photos:[
       'https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=600&h=600&fit=crop&q=80',
@@ -300,6 +300,17 @@ window.RouteMap = function RouteMap({ currentStopId, onActiveChange }) {
   const [error,     setError]     = React.useState(false);
   const [tourPhase, setTourPhase] = React.useState('idle'); // 'idle' | 'flying' | 'arrived'
 
+  // Begin fetching before the mosaic appears; also warm the next stop's cache.
+  React.useEffect(() => {
+    const upcoming = STOPS[Math.min(active + 1, STOPS.length - 1)];
+    [STOPS[active], upcoming, STOPS[0]].forEach(stop => {
+      stop.photos.forEach(src => {
+        const photo = new Image();
+        photo.src = src;
+      });
+    });
+  }, [active]);
+
   const routeBounds = () => {
     const lons = STOPS.map(s => s.lon);
     const lats = STOPS.map(s => s.lat);
@@ -361,6 +372,11 @@ window.RouteMap = function RouteMap({ currentStopId, onActiveChange }) {
     markersRef.current = [];
 
     STOPS.forEach((stop, i) => {
+      // Prefer the selected visit, otherwise the final visit at shared coordinates.
+      const visits = STOPS.map((s, index) => ({ s, index }))
+        .filter(({ s }) => s.lat === stop.lat && s.lon === stop.lon);
+      const visibleVisit = visits.find(({ index }) => index === active) || visits[visits.length - 1];
+      if (visibleVisit.index !== i) return;
       const isCurrent = stop.id === currentStopId;
       const isActive  = i === active;
 
@@ -385,10 +401,15 @@ window.RouteMap = function RouteMap({ currentStopId, onActiveChange }) {
   // ── Fly to active stop (manual only — tour manages its own camera) ─
   React.useEffect(() => {
     if (!mapRef.current || playing) return;
+    const source = mapRef.current.getSource('route');
+    if (source) source.setData({
+      type: 'Feature',
+      geometry: { type: 'LineString', coordinates: STOPS.map(stop => [stop.lon, stop.lat]) },
+    });
     if (onActiveChange) onActiveChange(STOPS[active]);
     const s = STOPS[active];
     mapRef.current.flyTo({ center: [s.lon, s.lat], zoom: 4.5, duration: 2200, essential: true });
-  }, [active, ready]);
+  }, [active, ready, playing]);
 
   // ── Cinematic tour sequence per stop ─────────────────────────────
   //
@@ -415,6 +436,11 @@ window.RouteMap = function RouteMap({ currentStopId, onActiveChange }) {
 
     // Step 3 — mosaic fades, pull back and glide to next city
     const t2 = setTimeout(() => {
+      // Finish at homecoming instead of flying back to the same Beijing coordinates.
+      if (active === STOPS.length - 1) {
+        setPlaying(false);
+        return;
+      }
       setTourPhase('departing');
       const src = mapRef.current && mapRef.current.getSource('route');
       if (src) src.setData({
@@ -427,7 +453,9 @@ window.RouteMap = function RouteMap({ currentStopId, onActiveChange }) {
     }, 4300); // 1600 zoom + 2700 mosaic display
 
     // Step 4 — advance when glide finishes
-    const t3 = setTimeout(() => setActive(nextIdx), 5900); // 4300 + 1600
+    const t3 = setTimeout(() => {
+      if (active < STOPS.length - 1) setActive(nextIdx);
+    }, 5900); // 4300 + 1600
 
     return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
   }, [playing, active, ready]);
@@ -443,7 +471,10 @@ window.RouteMap = function RouteMap({ currentStopId, onActiveChange }) {
           <h2 className="display"><i>Fly</i> across the journey</h2>
         </div>
         <div className="map-controls">
-          <button className="btn ghost" onClick={() => setPlaying(p => !p)}>
+          <button className="btn ghost" onClick={() => {
+            if (!playing && active === STOPS.length - 1) setActive(0);
+            setPlaying(p => !p);
+          }}>
             {playing ? '❚❚ Pause' : '▶ Auto-tour'}
           </button>
           <button className="btn" onClick={() => {
@@ -484,8 +515,18 @@ window.RouteMap = function RouteMap({ currentStopId, onActiveChange }) {
           <div className="tour-mosaic" key={active}>
             <div className="tour-mosaic-grid">
               {cur.photos.map((src, i) => (
-                <a key={i} href={cur.link} className="tour-mosaic-tile" style={{animationDelay: `${i * 90}ms`}}>
-                  <img src={src} alt={`${cur.city} ${i + 1}`} />
+                <a key={`${cur.id}-${src}`} href={cur.link} className="tour-mosaic-tile" style={{animationDelay: `${i * 90}ms`}}>
+                  <img src={src} alt={`${cur.city} ${i + 1}`} loading="eager" decoding="async"
+                    onError={event => {
+                      const img = event.currentTarget;
+                      if (img.dataset.fallback) return;
+                      img.dataset.fallback = 'true';
+                      img.style.display = 'none';
+                      const message = document.createElement('span');
+                      message.textContent = `${cur.city} · Photo unavailable — open gallery`;
+                      message.style.cssText = 'display:block;padding:1rem;color:inherit;text-align:center';
+                      img.parentElement.appendChild(message);
+                    }} />
                 </a>
               ))}
             </div>
